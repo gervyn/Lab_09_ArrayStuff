@@ -11,14 +11,14 @@ public class SafeInput {
             System.out.print(prompt);
             if (in.hasNextInt()) {
                 retVal = in.nextInt();
-                in.nextLine(); // clear end of line
+                in.nextLine();
                 if (retVal >= low && retVal <= high) {
                     done = true;
                 } else {
                     System.out.printf("Input must be between %d and %d inclusive.%n", low, high);
                 }
             } else {
-                String trash = in.nextLine(); // clear bad input
+                String trash = in.nextLine();
                 System.out.printf("You must enter an integer (you typed: %s).%n", trash);
             }
         } while (!done);
